@@ -3,146 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ETBS Skincare</title>
+<title>ETBS – Enlighten Beauty Solution</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#fff;color:#333;line-height:1.6}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
-body{
-background:#fff;
-color:#333;
-}
-
-/* HEADER */
+/* header */
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:white;
-box-shadow:0 3px 15px rgba(0,0,0,0.05);
+background:#fff;
+box-shadow:0 3px 12px rgba(0,0,0,.05);
+position:sticky;
+top:0;
+z-index:100
 }
 
-.logo{
-font-size:26px;
-font-weight:600;
-color:#ff3d86;
+.logo{font-size:26px;font-weight:600;color:#ff4a92}
+
+nav a{
+margin:0 12px;
+text-decoration:none;
+color:#444;
+font-weight:500
 }
 
-.cart-btn{
-background:#ff3d86;
-color:white;
-padding:10px 20px;
-border-radius:20px;
-cursor:pointer;
+.cartBtn{
+background:#ff4a92;
+color:#fff;
+padding:10px 18px;
+border-radius:25px;
+cursor:pointer
 }
 
-/* HERO */
+/* hero */
 
 .hero{
-background:linear-gradient(135deg,#ffd6e7,#fff0f6);
+height:90vh;
+background:linear-gradient(135deg,#ffd6e8,#fff0f7);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:80px 20px;
+padding:30px
 }
 
-.hero h1{
-font-size:42px;
-color:#ff3d86;
-margin-bottom:10px;
+.hero h1{font-size:48px;color:#ff4a92;margin-bottom:10px}
+
+.hero p{max-width:650px;margin-bottom:25px}
+
+.btn{
+background:#ff4a92;
+color:#fff;
+padding:14px 28px;
+border-radius:28px;
+text-decoration:none;
+font-weight:600
 }
 
-.hero p{
-margin-bottom:20px;
+/* sections */
+
+.section{padding:80px 8%}
+
+.title{
+text-align:center;
+font-size:34px;
+margin-bottom:40px;
+color:#ff4a92
 }
 
-/* PRODUCTS */
+/* about */
 
-.section{
-padding:60px 8%;
+.about{
+max-width:850px;
+margin:auto;
+text-align:center
 }
+
+/* products */
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:28px
 }
 
 .product{
-background:white;
-border-radius:15px;
+background:#fff;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
 padding:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.06);
-text-align:center;
+text-align:center
 }
 
 .product img{
 width:100%;
 border-radius:10px;
-margin-bottom:15px;
+margin-bottom:14px
+}
+
+.price{
+color:#ff4a92;
+font-weight:600;
+margin:10px 0
 }
 
 .product button{
-background:#ff3d86;
 border:none;
-padding:10px 20px;
-color:white;
-border-radius:20px;
-cursor:pointer;
+background:#ff4a92;
+color:#fff;
+padding:10px 22px;
+border-radius:22px;
+cursor:pointer
 }
 
-/* CART */
+/* benefits */
+
+.benefits{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+text-align:center
+}
+
+.benefit{
+background:#fff0f7;
+padding:30px;
+border-radius:12px
+}
+
+/* testimonials */
+
+.testimonial{
+max-width:700px;
+margin:auto;
+text-align:center;
+font-style:italic
+}
+
+/* faq */
+
+.faq{max-width:800px;margin:auto}
+
+.faq h4{margin-top:20px;color:#ff4a92}
+
+/* cart */
 
 .cart{
 position:fixed;
-right:-400px;
+right:-360px;
 top:0;
-width:350px;
+width:340px;
 height:100%;
-background:white;
-box-shadow:-5px 0 20px rgba(0,0,0,0.1);
+background:#fff;
+box-shadow:-5px 0 20px rgba(0,0,0,.1);
 padding:20px;
-transition:0.3s;
-overflow:auto;
+transition:.3s;
+overflow:auto
 }
 
-.cart.active{
-right:0;
-}
+.cart.active{right:0}
 
-.cart-item{
+.cartItem{
 display:flex;
 justify-content:space-between;
-margin-bottom:15px;
+margin-bottom:10px
 }
 
 .checkout{
-background:#ff3d86;
-color:white;
-padding:12px;
-border:none;
-width:100%;
 margin-top:20px;
-border-radius:25px;
-cursor:pointer;
+width:100%;
+background:#ff4a92;
+color:#fff;
+border:none;
+padding:12px;
+border-radius:24px;
+cursor:pointer
 }
+
+/* contact */
+
+.contact{text-align:center}
+
+/* footer */
 
 footer{
-text-align:center;
-padding:25px;
 background:#111;
-color:white;
-margin-top:60px;
+color:#fff;
+text-align:center;
+padding:30px;
+margin-top:60px
 }
-
 </style>
 </head>
 
@@ -152,92 +210,167 @@ margin-top:60px;
 
 <div class="logo">ETBS</div>
 
-<div class="cart-btn" onclick="toggleCart()">
-Cart (<span id="count">0</span>)
-</div>
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="cartBtn" onclick="toggleCart()">Cart (<span id="count">0</span>)</div>
 
 </header>
 
-
 <section class="hero">
 
-<h1>Glow Naturally With ETBS</h1>
+<h1>Reveal Your Natural Glow</h1>
 
-<p>Premium skincare products designed for healthy glowing skin.</p>
+<p>
+ETBS – Enlighten Beauty Solution delivers premium skincare products designed
+to improve skin texture, reduce acne marks, and enhance natural glow.
+</p>
+
+<a class="btn" href="#products">Shop Now</a>
 
 </section>
 
+<section class="section" id="about">
 
-<section class="section">
+<h2 class="title">About Our Brand</h2>
 
-<h2 style="text-align:center;margin-bottom:40px;color:#ff3d86">
-Best Selling Products
-</h2>
+<div class="about">
+
+<p>
+ETBS focuses on creating effective skincare products that help maintain
+healthy, radiant skin. Our mission is to provide beauty solutions that
+support everyday skincare routines with reliable formulas.
+</p>
+
+</div>
+
+</section>
+
+<section class="section" id="products">
+
+<h2 class="title">Our Products</h2>
 
 <div class="products">
 
 <div class="product">
 <img src="https://via.placeholder.com/300">
 <h3>Night Fairness Cream</h3>
-<p>₹799</p>
-<button onclick="addToCart('Night Cream',799)">
-Add To Cart
-</button>
+<div class="price">₹799</div>
+<button onclick="add('Night Cream',799)">Add To Cart</button>
 </div>
 
 <div class="product">
 <img src="https://via.placeholder.com/300">
 <h3>Acne Repair Cream</h3>
-<p>₹699</p>
-<button onclick="addToCart('Acne Cream',699)">
-Add To Cart
-</button>
+<div class="price">₹699</div>
+<button onclick="add('Acne Cream',699)">Add To Cart</button>
 </div>
 
 <div class="product">
 <img src="https://via.placeholder.com/300">
-<h3>Glow Face Serum</h3>
-<p>₹899</p>
-<button onclick="addToCart('Face Serum',899)">
-Add To Cart
-</button>
+<h3>Glow Skin Serum</h3>
+<div class="price">₹899</div>
+<button onclick="add('Serum',899)">Add To Cart</button>
 </div>
 
 <div class="product">
 <img src="https://via.placeholder.com/300">
 <h3>Brightening Cleanser</h3>
-<p>₹499</p>
-<button onclick="addToCart('Cleanser',499)">
-Add To Cart
-</button>
+<div class="price">₹499</div>
+<button onclick="add('Cleanser',499)">Add To Cart</button>
 </div>
 
 </div>
 
 </section>
 
+<section class="section">
+
+<h2 class="title">Why Choose ETBS</h2>
+
+<div class="benefits">
+
+<div class="benefit">
+<h3>Healthy Glow</h3>
+<p>Improves brightness and natural skin radiance.</p>
+</div>
+
+<div class="benefit">
+<h3>Acne Repair</h3>
+<p>Helps reduce acne marks and pigmentation.</p>
+</div>
+
+<div class="benefit">
+<h3>Skin Hydration</h3>
+<p>Deep nourishment and hydration.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">Customer Reviews</h2>
+
+<div class="testimonial">
+
+<p>
+“After using ETBS products my skin became smoother and brighter.
+Highly recommended skincare brand.”
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">FAQ</h2>
+
+<div class="faq">
+
+<h4>Is ETBS suitable for all skin types?</h4>
+<p>Yes, our skincare products are designed for daily use.</p>
+
+<h4>How long does it take to see results?</h4>
+<p>Results may vary but regular use improves skin health.</p>
+
+</div>
+
+</section>
+
+<section class="section contact" id="contact">
+
+<h2 class="title">Contact</h2>
+
+<p>Email: support@etbsskincare.com</p>
+<p>Instagram: https://www.instagram.com/etbsbackup</p>
+
+</section>
 
 <div class="cart" id="cart">
 
 <h2>Your Cart</h2>
 
-<div id="cart-items"></div>
+<div id="cartItems"></div>
 
-<h3>Total: ₹<span id="total">0</span></h3>
+<h3>Total ₹<span id="total">0</span></h3>
 
-<button class="checkout" onclick="checkout()">
-Checkout
-</button>
+<button class="checkout" onclick="whatsappOrder()">Checkout via WhatsApp</button>
 
 </div>
 
-
 <footer>
 
-<p>© 2026 ETBS Skincare</p>
+<p>© 2026 ETBS – Enlighten Beauty Solution</p>
+<p>Premium Skincare Brand</p>
 
 </footer>
-
 
 <script>
 
@@ -248,57 +381,43 @@ function toggleCart(){
 document.getElementById("cart").classList.toggle("active")
 }
 
-function addToCart(name,price){
-
+function add(name,price){
 cart.push({name,price})
-
 total+=price
-
-updateCart()
-
+renderCart()
 }
 
-function updateCart(){
+function renderCart(){
 
-let items=document.getElementById("cart-items")
-
-items.innerHTML=""
+let list=document.getElementById("cartItems")
+list.innerHTML=""
 
 cart.forEach(item=>{
-
-items.innerHTML+=`
-
-<div class="cart-item">
-
+list.innerHTML+=`
+<div class="cartItem">
 <span>${item.name}</span>
-
 <span>₹${item.price}</span>
-
-</div>
-
-`
-
+</div>`
 })
 
-document.getElementById("total").innerText=total
-
 document.getElementById("count").innerText=cart.length
-
+document.getElementById("total").innerText=total
 }
 
-function checkout(){
+function whatsappOrder(){
 
-alert("Order placed! We will contact you soon.")
+let text="Order Details:%0A"
 
-cart=[]
-total=0
+cart.forEach(i=>{
+text+=`${i.name} - ₹${i.price}%0A`
+})
 
-updateCart()
+text+=`Total: ₹${total}`
 
+window.open(`https://wa.me/?text=${text}`)
 }
 
 </script>
-
 
 </body>
 </html>
